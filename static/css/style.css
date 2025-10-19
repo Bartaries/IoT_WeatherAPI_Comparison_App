@@ -101,7 +101,7 @@ body {
     background: rgba(255, 255, 255, 0.3);
     color: #fff;
     border: none;
-    margin-left: -45px;
+    margin-left: -41px;
     z-index: 5;
     transition: background 0.3s;
 }
