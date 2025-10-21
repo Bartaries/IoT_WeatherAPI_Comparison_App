@@ -3,158 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="">
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animation.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
-    
-    <div class="main-content">
-        <div class="sky-vision-header">
-            <i class="fas fa-sun sun"></i>
-            <i class="fas fa-cloud cloud cloud1"></i>
-            <i class="fas fa-cloud cloud cloud2"></i>
-            <i class="fas fa-cloud cloud cloud3"></i>
-
-            <div class="search-container">
-                <form id="search-form" class="d-flex">
-                    <input id="city-input" class="form-control search-input" type="search" placeholder="Wpisz miasto..." aria-label="Search">
-                    <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
+    <div class="intro-curtain">
+        <div class="lightning-bolt"></div>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
         </div>
+        <div class="main-content">
+            <div class="sky-vision-header">
+                <i class="fas fa-sun sun"></i>
+                <i class="fas fa-cloud cloud cloud1"></i>
+                <i class="fas fa-cloud cloud cloud2"></i>
+                <i class="fas fa-cloud cloud cloud3"></i>
 
-        <div class="container dashboard-container">
-            <header class="mb-4">
-                <h1 class="text-center text-primary fw-light">IoT Ground Monitoring Dashboard</h1>
-            </header>
+                <div class="search-container">
+                    <form id="search-form" class="d-flex">
+                        <input id="city-input" class="form-control search-input" type="search" placeholder="Wpisz miasto..." aria-label="Search">
+                        <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
 
-            <div class="row g-4">
-                <div class="col-12 col-lg-8">
-                    <div class="card current-weather-card p-4 rounded-3xl mb-4">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div>
-                                    <h2 id="location-name" class="card-title mb-0 fs-1 fw-bold">Wrocław, PL</h2>
-                                    <p id="current-timestamp" class="mb-0">Friday, 10:00 UTC</p>
+            <div class="container dashboard-container">
+                <header class="mb-4">
+                    <h1 class="text-center text-primary fw-light title-stretch">IoT Ground Monitoring Dashboard</h1>
+                </header>
+
+                <div class="row g-4">
+                    <div class="col-12 col-lg-8">
+                        <div class="card current-weather-card p-4 rounded-3xl mb-4">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h2 id="location-name" class="card-title mb-0 fs-1 fw-bold">Wrocław, PL</h2>
+                                        <p id="current-timestamp" class="mb-0">Friday, 10:00 UTC</p>
+                                    </div>
+                                    <div id="weather-icon-container">
+                                        <i class="fas fa-cloud-sun fa-4x opacity-75"></i>
+                                    </div>
                                 </div>
-                                <div id="weather-icon-container">
-                                    <i class="fas fa-cloud-sun fa-4x opacity-75"></i>
+                                
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span id="main-temp" class="main-temp">15.4°C</span>
+                                        <p id="weather-description" class="lead">Zachmurzone jak wyobraźnia dr trój-habilitowanego</p>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <ul class="list-unstyled fw-bold">
+                                            <li id="high-low-temp">High: 17°C / Low: 10°C</li>
+                                            <li id="feels-like">Feels Like: 14°C</li>
+                                            <li id="rain-chance-container">
+                                                <i class="fas fa-umbrella"></i> Rain Chance: 15%
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <div class="row align-items-center">
+                        </div>
+
+                        <h3 class="fw-normal text-secondary mb-3 mt-4">Sensor Data</h3>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-3">
+                                <div class="card weather-card text-center p-3">
+                                    <i class="fas fa-download fa-fade fa-2x text-info mb-2"></i>
+                                    <p class="mb-0 text-muted small">Transfer</p>
+                                    <div class="metric-value">10 kb/s</div>
+                                    <p class="mb-0 small">Jak krew z nosa</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="card weather-card text-center p-3">
+                                    <i class="fas fa-water fa-2x text-primary mb-2"></i>
+                                    <p id="humidity-label" class="mb-0 text-muted small">Humidity</p>
+                                    <div id="humidity-value" class="metric-value">68%</div>
+                                    <p class="mb-0 small">Dew Point 9°C</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="card weather-card text-center p-3">
+                                    <i class="fas fa-temperature-full fa-2x text-danger mb-2"></i>
+                                    <p class="mb-0 text-muted small">Temperature</p>
+                                    <div id="temperature-value" class="metric-value">24.5°C</div>
+                                    <p class="mb-0 small">Ground Surface Temp.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="card weather-card text-center p-3">
+                                    <i id="device-status-icon" class="fas fa-2x fa-link text-success mb-2"></i>
+                                    <p class="mb-0 text-muted small">Device status</p>
+                                    <div class="metric-value">Online</div>
+                                    <p class="mb-0 small">Till 12/10 16:10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <div class="card weather-card p-4 rounded-3xl mb-4 h-100">
+                            <h3 class="card-title fw-normal mb-3 text-secondary">Astro-Information</h3>
+                            <div class="row text-center">
                                 <div class="col-6">
-                                    <span id="main-temp" class="main-temp">15.4°C</span>
-                                    <p id="weather-description" class="lead">Zachmurzone jak wyobraźnia dr trój-habilitowanego</p>
+                                    <i class="fas fa-sunrise fa-3x text-warning mb-2"></i>
+                                    <p class="mb-0 text-muted small">Sunrise</p>
+                                    <div id="sunrise-time" class="metric-value">07:15</div>
                                 </div>
-                                <div class="col-6 text-end">
-                                    <ul class="list-unstyled fw-bold">
-                                        <li id="high-low-temp">High: 17°C / Low: 10°C</li>
-                                        <li id="feels-like">Feels Like: 14°C</li>
-                                        <li id="rain-chance-container">
-                                            <i class="fas fa-umbrella"></i> Rain Chance: 15%
-                                        </li>
-                                    </ul>
+                                <div class="col-6">
+                                    <i class="fas fa-sunset fa-3x text-danger mb-2"></i>
+                                    <p class="mb-0 text-muted small">Sunset</p>
+                                    <div id="sunset-time" class="metric-value">18:42</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <h3 class="fw-normal text-secondary mb-3 mt-4">Sensor Data</h3>
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <div class="card weather-card text-center p-3">
-                                <i class="fas fa-download fa-fade fa-2x text-info mb-2"></i>
-                                <p class="mb-0 text-muted small">Transfer</p>
-                                <div class="metric-value">10 kb/s</div>
-                                <p class="mb-0 small">Jak krew z nosa</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="card weather-card text-center p-3">
-                                <i class="fas fa-water fa-2x text-primary mb-2"></i>
-                                <p id="humidity-label" class="mb-0 text-muted small">Humidity</p>
-                                <div id="humidity-value" class="metric-value">68%</div>
-                                <p class="mb-0 small">Dew Point 9°C</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="card weather-card text-center p-3">
-                                <i class="fas fa-temperature-full fa-2x text-danger mb-2"></i>
-                                <p class="mb-0 text-muted small">Temperature</p>
-                                <div id="temperature-value" class="metric-value">24.5°C</div>
-                                <p class="mb-0 small">Ground Surface Temp.</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="card weather-card text-center p-3">
-                                <i id="device-status-icon" class="fas fa-2x fa-link text-success mb-2"></i>
-                                <p class="mb-0 text-muted small">Device status</p>
-                                <div class="metric-value">Online</div>
-                                <p class="mb-0 small">Till 12/10 16:10</p>
+                            <hr>
+                            <h5 class="fw-normal mt-3">Local Weather Alerts</h5>
+                            <div id="alerts-container">
+                                <div class="alert alert-warning py-2 mb-2" role="alert">
+                                    <i class="fas fa-exclamation-triangle"></i> No active warnings.
+                                </div>
+                                <div class="alert alert-info py-2" role="alert">
+                                    <i class="fas fa-info-circle"></i> Low chance of precipitation for the next 6 hours.
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-lg-4">
-                    <div class="card weather-card p-4 rounded-3xl mb-4 h-100">
-                        <h3 class="card-title fw-normal mb-3 text-secondary">Astro-Information</h3>
-                        <div class="row text-center">
-                            <div class="col-6">
-                                <i class="fas fa-sunrise fa-3x text-warning mb-2"></i>
-                                <p class="mb-0 text-muted small">Sunrise</p>
-                                <div id="sunrise-time" class="metric-value">07:15</div>
-                            </div>
-                            <div class="col-6">
-                                <i class="fas fa-sunset fa-3x text-danger mb-2"></i>
-                                <p class="mb-0 text-muted small">Sunset</p>
-                                <div id="sunset-time" class="metric-value">18:42</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <h5 class="fw-normal mt-3">Local Weather Alerts</h5>
-                        <div id="alerts-container">
-                            <div class="alert alert-warning py-2 mb-2" role="alert">
-                                <i class="fas fa-exclamation-triangle"></i> No active warnings.
-                            </div>
-                            <div class="alert alert-info py-2" role="alert">
-                                <i class="fas fa-info-circle"></i> Low chance of precipitation for the next 6 hours.
+                    <div class="col-12">
+                        <div class="card weather-card p-4 rounded-3xl">
+                            <h3 class="card-title fw-normal mb-3 text-secondary">Hourly Data Stream</h3>
+                            <div id="hourly-forecast-container" class="hourly-scroll pb-2 d-flex justify-content-center align-items-center">
+                                <div class="hourly-item"><p class="fw-bold mb-1">11:00</p><i class="fas fa-cloud-sun fa-2x text-info"></i><p class="fw-bold mt-1 mb-0">16°C</p><small class="text-muted">10% Rain</small></div>
+                                <div class="hourly-item"><p class="fw-bold mb-1">12:00</p><i class="fas fa-sun fa-2x text-warning"></i><p class="fw-bold mt-1 mb-0">17°C</p><small class="text-muted">5% Rain</small></div>
+                                <div class="hourly-item"><p class="fw-bold mb-1">13:00</p><i class="fas fa-sun fa-2x text-warning"></i><p class="fw-bold mt-1 mb-0">17°C</p><small class="text-muted">0% Rain</small></div>
+                                <div class="hourly-item"><p class="fw-bold mb-1">14:00</p><i class="fas fa-cloud fa-2x text-secondary"></i><p class="fw-bold mt-1 mb-0">16°C</p><small class="text-muted">15% Rain</small></div>
+                                <div class="hourly-item"><p class="fw-bold mb-1">15:00</p><i class="fas fa-cloud-showers-heavy fa-2x text-primary"></i><p class="fw-bold mt-1 mb-0">14°C</p><small class="text-muted">50% Rain</small></div>
+                                <div class="hourly-item"><p class="fw-bold mb-1">16:00</p><i class="fas fa-cloud-showers-heavy fa-2x text-primary"></i><p class="fw-bold mt-1 mb-0">13°C</p><small class="text-muted">70% Rain</small></div>
+                                <div class="hourly-item"><p class="fw-bold mb-1">17:00</p><i class="fas fa-cloud-rain fa-2x text-primary"></i><p class="fw-bold mt-1 mb-0">12°C</p><small class="text-muted">60% Rain</small></div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12">
-                    <div class="card weather-card p-4 rounded-3xl">
-                        <h3 class="card-title fw-normal mb-3 text-secondary">Hourly Data Stream</h3>
-                        <div id="hourly-forecast-container" class="hourly-scroll pb-2 d-flex justify-content-center align-items-center">
-                            <div class="hourly-item"><p class="fw-bold mb-1">11:00</p><i class="fas fa-cloud-sun fa-2x text-info"></i><p class="fw-bold mt-1 mb-0">16°C</p><small class="text-muted">10% Rain</small></div>
-                            <div class="hourly-item"><p class="fw-bold mb-1">12:00</p><i class="fas fa-sun fa-2x text-warning"></i><p class="fw-bold mt-1 mb-0">17°C</p><small class="text-muted">5% Rain</small></div>
-                            <div class="hourly-item"><p class="fw-bold mb-1">13:00</p><i class="fas fa-sun fa-2x text-warning"></i><p class="fw-bold mt-1 mb-0">17°C</p><small class="text-muted">0% Rain</small></div>
-                            <div class="hourly-item"><p class="fw-bold mb-1">14:00</p><i class="fas fa-cloud fa-2x text-secondary"></i><p class="fw-bold mt-1 mb-0">16°C</p><small class="text-muted">15% Rain</small></div>
-                            <div class="hourly-item"><p class="fw-bold mb-1">15:00</p><i class="fas fa-cloud-showers-heavy fa-2x text-primary"></i><p class="fw-bold mt-1 mb-0">14°C</p><small class="text-muted">50% Rain</small></div>
-                            <div class="hourly-item"><p class="fw-bold mb-1">16:00</p><i class="fas fa-cloud-showers-heavy fa-2x text-primary"></i><p class="fw-bold mt-1 mb-0">13°C</p><small class="text-muted">70% Rain</small></div>
-                            <div class="hourly-item"><p class="fw-bold mb-1">17:00</p><i class="fas fa-cloud-rain fa-2x text-primary"></i><p class="fw-bold mt-1 mb-0">12°C</p><small class="text-muted">60% Rain</small></div>
+                    <div class="col-12">
+                        <div class="card weather-card p-4 rounded-3xl">
+                            <h3 class="card-title fw-normal mb-3 text-secondary">IoT Data History (Last 24 Hours)</h3>
+                            <div style="height: 300px;">
+                                <canvas id="sensor-chart"></canvas>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="card weather-card p-4 rounded-3xl">
-                        <h3 class="card-title fw-normal mb-3 text-secondary">IoT Data History (Last 24 Hours)</h3>
-                        <div style="height: 300px;">
-                            <canvas id="sensor-chart"></canvas>
-                        </div>
-                </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>   
     <div class="grass-footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>

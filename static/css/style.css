@@ -103,23 +103,11 @@ body {
     border: none;
     margin-left: -41px;
     z-index: 5;
-    transition: background 0.3s;
 }
 
 .search-btn:hover {
     background: rgba(255, 255, 255, 0.5);
     color: #fff;
-}
-
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
-@keyframes move-clouds {
-    from { transform: translateX(-200px); }
-    to { transform: translateX(100vw); }
 }
 
 .dashboard-container {
@@ -212,4 +200,72 @@ body {
     height: 10px;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='10' viewBox='0 0 60 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 C 5 0, 15 0, 20 10 S 30 0, 40 10 S 50 0, 60 10' fill='%2334a853'/%3E%3C/svg%3E");
     background-size: 60px 10px;
+}
+
+.intro-curtain {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.lightning-bolt {
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px #edff9d, 0 0 40px #edff9d;
+    transform: translateY(-100%);
+    
+    animation: 
+        strike 0.3s cubic-bezier(0.1, 0.9, 0.2, 1) forwards, 
+        flash 0.1s 0.2s 1 forwards, 
+        fade-out 0.5s 0.3s forwards;
+    z-index: 10;
+}
+
+.title-stretch {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-weight: 800;
+    text-shadow: 0 0 10px #0d6efd;
+    opacity: 0;
+    animation: appear 1s 0.4s forwards;
+    text-align: center;
+    padding: 20px;
+    z-index: 5;
+}
+
+.logo{
+    position: absolute;
+    top: 21px;
+    right: 36px;
+    z-index: 11;
+    width: 80px;
+    height: 80px;
+    background-image: None;
+    border-radius: 50%;
+    border: #edff9d 2px;
+    display: flex;
+    justify-content: center;
+    opacity: 0.3;
+    align-items: center;
+    font-size: 2.5rem; 
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+    opacity: 0;
+    animation: appear-disappear 1.3s 0.2s forwards;
+    z-index: 5;
+}
+
+.logo img {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  opacity: inherit;
 }
