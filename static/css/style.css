@@ -258,7 +258,7 @@ body {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
     opacity: 0;
-    animation: appear-disappear 1.3s 0.2s forwards;
+    animation: appear-disappear 1.2s 0.2s forwards;
     z-index: 5;
 }
 
