@@ -139,6 +139,10 @@ body {
     border: none;
 }
 
+.card-title {
+    text-align: center;
+}
+
 .hourly-scroll {
     overflow-x: auto;
     white-space: nowrap;
@@ -230,7 +234,7 @@ body {
 .title-stretch {
     font-size: clamp(1.5rem, 5vw, 4rem);
     font-weight: 800;
-    text-shadow: 0 0 10px #0d6efd;
+    color: #ffffff;
     opacity: 0;
     animation: appear 1s 0.4s forwards;
     text-align: center;
