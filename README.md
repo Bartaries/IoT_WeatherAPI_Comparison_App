@@ -11,13 +11,13 @@ This project delivers a robust solution by integrating real-time hardware weathe
 
 ## Technologies Used
 
-The application is built on the following multi-stack architecture:
-Hardware: 💻 ESP32 micro-controller
-Back-end/Server: Python with the Flask framework (for handling the API, data streaming, and business logic).
-Machine Learning: Python libraries such as Scikit-learn, Pandas, and NumPy.
-Front-end: ☕ JavaScript, HTML5, and CSS3 (for the responsive and dynamic User Interface).
-Data Visualization: **Bartek and Wojtek I need your help here**
-Version Control: 🐙 Git & GitHub
+The application is built on the following multi-stack architecture:  
+Hardware: 💻 ESP32 micro-controller  
+Back-end/Server: Python with the Flask framework (for handling the API, data streaming, and business logic).  
+Machine Learning: Python libraries such as Scikit-learn, Pandas, and NumPy.  
+Front-end: ☕ JavaScript, HTML5, and CSS3 (for the responsive and dynamic User Interface).  
+Data Visualization: **Bartek and Wojtek I need your help here**  
+Version Control: 🐙 Git & GitHub  
 
 ## Instalation
 
@@ -31,29 +31,34 @@ These instructions will guide you through setting up and running the project loc
 
 ### Software Setup:
 
-Install Python dependencies (using a virtual environment is recommended):
-Create and activate a virtual environment (optional but recommended)
-python3 -m venv env
-source venv/bin/activate  # Linux/macOS
-or: venv\Scripts\activate # Windows
+Install Python dependencies (using a virtual environment is recommended):  
+Create and activate a virtual environment (optional but recommended)  
+python3 -m venv env  
+source venv/bin/activate  # Linux/macOS  
+or: venv\Scripts\activate # Windows  
 
 ### Install dependencies
-pip install -r requirements.txt
+pip install -r requirements.txt  
 Run the Flask server: flask run
+
 
 The application will be accessible at: http://localhost:5000 (Flask's default port).
 
 ## Testing
+
 **Wojtek please help**
+
 
 We maintain code quality through a rigorous testing process:
 
+
 Automated Tests: 
+
 
 Manual Tests: 
 
 ## Authors
-* Wojciech Mycek 
-* Bartosz Baran
-* Piotr Mania
-* Bruno Roszyk
+* Wojciech Mycek (pls write your role)
+* Bartosz Baran (pls write your role)
+* Piotr Mania (Product Owner)
+* Bruno Roszyk (pls write your role)
