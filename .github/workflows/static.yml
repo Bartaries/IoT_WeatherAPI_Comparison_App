@@ -3,11 +3,14 @@ name: Deploy static content to Pages
 on:
   push:
     branches: ["main"]
+
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -21,23 +24,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install Linting Tools
-        run: |
-          npm install eslint stylelint stylelint-config-standard
+      - name: Install Dependencies (Tak jak Bóg przykazał)
+        run: npm ci
 
-      - name: Lint JavaScript
-        run: |
-          npx eslint . --ext .js
+      - name: Lint JavaScript (Sprawdź ten swój syf)
+        run: npx eslint . --ext .js
 
-      - name: Lint CSS
-        run: |
-          npx stylelint "static/css/animation.css"
+      - name: Lint CSS (To też sprawdź)
+        run: npx stylelint "**/*.css"
+      
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
