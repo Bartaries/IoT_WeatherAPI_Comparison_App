@@ -37,4 +37,7 @@ jobs:
     - name: Server status
       run: |
         echo "Server is closed properly 🥵"
+    - name: Logs check
+      run: |
+        python logs_config.py
         
