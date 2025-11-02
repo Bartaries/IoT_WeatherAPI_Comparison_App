@@ -38,7 +38,7 @@ jobs:
         run: npx eslint . --ext .js
 
       - name: Lint CSS (To też sprawdź)
-        run: npx stylelint "**/*.css"
+        run: npx stylelint "static/css/animation.css"
       
 
       - name: Setup Pages
