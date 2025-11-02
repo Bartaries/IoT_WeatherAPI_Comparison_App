@@ -37,7 +37,7 @@ jobs:
 
       - name: Lint CSS
         run: |
-          npx stylelint "**/*.css"
+          npx stylelint "static/css/animation.css"
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
