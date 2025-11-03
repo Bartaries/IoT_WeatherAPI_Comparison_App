@@ -54,7 +54,7 @@ Automated Tests: <br>
 Manual Tests:<br>
 
 ## Authors
-* Wojciech Mycek (Tester / Machine Learning engineer)
-* Bartosz Baran (Full stack dev)
+* Wojciech Mycek (Tester / Machine Learning Engineer)
+* Bartosz Baran (Full Stack Dev)
 * Piotr Mania (Product Owner)
-* Bruno Roszyk (pls write your role)
+* Bruno Roszyk (Embedded System Engineer)
