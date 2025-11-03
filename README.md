@@ -55,6 +55,6 @@ Manual Tests:<br>
 
 ## Authors
 * Wojciech Mycek (Tester / Machine Learning engineer)
-* Bartosz Baran (pls write your role)
+* Bartosz Baran (Full stack dev)
 * Piotr Mania (Product Owner)
 * Bruno Roszyk (pls write your role)
