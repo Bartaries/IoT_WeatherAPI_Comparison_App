@@ -19,6 +19,15 @@ body {
     flex-grow: 1;
 }
 
+.alerts-container{
+    overflow-y: auto;
+}
+
+canvas {
+            display: block;
+            border-radius: 20px; 
+        }
+
 .main-content::before {
     content: '';
     position: absolute;

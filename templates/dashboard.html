@@ -10,8 +10,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animation.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+            "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+    }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/three.js') }}"></script>
 </head>
 <body>
     <div class="intro-curtain">
@@ -108,9 +117,8 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-4">
-                        <div class="card weather-card p-4 rounded-3xl mb-4 h-100">
-                            <h3 class="card-title fw-normal mb-3 text-secondary">Astro-Information</h3>
+                    <div class="col-6 col-lg-4">
+                        <div class="card weather-card p-4 rounded-3xl mb-2 h-50">
                             <div class="row text-center">
                                 <div class="col-6">
                                     <i class="fas fa-sunrise fa-3x text-warning mb-2"></i>
@@ -133,6 +141,8 @@
                                     <i class="fas fa-info-circle"></i> Low chance of precipitation for the next 6 hours.
                                 </div>
                             </div>
+                        </div>
+                        <div id="sensor-container" class="card weather-card p-0 rounded-4 mb-2 h-50">
                         </div>
                     </div>
 

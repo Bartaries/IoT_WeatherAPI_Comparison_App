@@ -60,3 +60,20 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    class MockApp:
+        def __init__(self):
+            self.logger = logging.getLogger('flask.app')
+
+    mock_app = MockApp()
+    setup_logging(mock_app, level=logging.DEBUG)
+
+    logger = mock_app.logger
+    
+    print("--- Testowanie kolorowych logów ---")
+    logger.debug("To jest wiadomość DEBUG (powinna być cyjanowa).")
+    logger.info("To jest wiadomość INFO (powinna być zielona).")
+    logger.warning("To jest wiadomość WARNING (powinna być żółta).")
+    logger.error("To jest wiadomość ERROR (powinna być czerwona).")
+    logger.critical("To jest wiadomość CRITICAL (powinna być magentowa).")
+    print("--- Sprawdź też plik 'logs/app.log' - powinien być bez kolorów ---")
