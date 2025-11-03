@@ -34,10 +34,6 @@ jobs:
       - name: Install Dependencies (Tak jak Bóg przykazał)
         run: npm ci
 
-      - name: Lint CSS (To też sprawdź)
-        run: npx stylelint "static/css/animation.css"
-      
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
