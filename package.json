@@ -2,16 +2,16 @@
   "name": "projekt_iot",
   "version": "1.0.0",
   "description": "This project delivers a robust solution by integrating real-time hardware weather monitoring (via ESP32 micro-controller) with a Machine Learning (ML) model for predictive analytics. The entire system is packaged as a web application, providing users with an aesthetic, browser-based Graphical User Interface (GUI).",
-  "main": "index.js",
+  "main": "app.py",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "https://github.com/Bartaries/IoT_WeatherAPI_Comparison_App/tree/main/.github/workflows"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bartaries/IoT_WeatherAPI_Comparison_App.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bartosz Baran, Wojciech Mycek, Piotr Mania",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
