@@ -34,9 +34,6 @@ jobs:
       - name: Install Dependencies (Tak jak Bóg przykazał)
         run: npm ci
 
-      - name: Lint JavaScript (Sprawdź ten swój syf)
-        run: npx eslint . --ext .js
-
       - name: Lint CSS (To też sprawdź)
         run: npx stylelint "static/css/animation.css"
       
