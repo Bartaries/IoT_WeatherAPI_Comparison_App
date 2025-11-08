@@ -44,6 +44,10 @@ Run the Flask server: `flask run`<br>
 
 The application will be accessible at: http://localhost:5000 (Flask's default port).
 
+If you notice problem with flask command not found please try:
+
+`python -m flask run`<br>
+
 ## Testing
 
 **Wojtek please help**
