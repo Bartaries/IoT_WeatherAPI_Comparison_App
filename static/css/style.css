@@ -19,8 +19,14 @@ body {
     flex-grow: 1;
 }
 
-.alerts-container{
+#alerts-container{
     overflow-y: auto;
+    max-height: 100px;
+}
+
+.no-extendable {
+    min-height: 322px;
+    max-height: 325px;
 }
 
 canvas {

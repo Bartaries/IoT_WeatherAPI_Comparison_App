@@ -65,7 +65,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-6">
                                         <span id="main-temp" class="main-temp">15.4°C</span>
-                                        <p id="weather-description" class="lead">Zachmurzone jak wyobraźnia dr trój-habilitowanego</p>
+                                        <p id="weather-description" class="lead">Zachmurzone</p>
                                     </div>
                                     <div class="col-6 text-end">
                                         <ul class="list-unstyled fw-bold">
@@ -84,10 +84,10 @@
                         <div class="row g-3">
                             <div class="col-6 col-md-3">
                                 <div class="card weather-card text-center p-3">
-                                    <i class="fas fa-download fa-fade fa-2x text-info mb-2"></i>
-                                    <p class="mb-0 text-muted small">Transfer</p>
-                                    <div class="metric-value">10 kb/s</div>
-                                    <p class="mb-0 small">Jak krew z nosa</p>
+                                    <i id="soil-indicator-icon" class="fas fa-flip fa-seedling fa-2x text-success mb-2"></i>
+                                    <p class="mb-0 text-muted small">Soil</p>
+                                    <div class="metric-value"><span id="soil-indicator">True</span></div>
+                                    <p class="mb-0 small">Grounded</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-3">
@@ -95,7 +95,7 @@
                                     <i class="fas fa-water fa-2x text-primary mb-2"></i>
                                     <p id="humidity-label" class="mb-0 text-muted small">Humidity</p>
                                     <div id="humidity-value" class="metric-value">68%</div>
-                                    <p class="mb-0 small">Dew Point 9°C</p>
+                                    <p id="dew-point" class="mb-0 small">Dew Point 9°C</p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-3">
@@ -110,15 +110,15 @@
                                 <div class="card weather-card text-center p-3">
                                     <i id="device-status-icon" class="fas fa-2x fa-link text-success mb-2"></i>
                                     <p class="mb-0 text-muted small">Device status</p>
-                                    <div class="metric-value">Online</div>
-                                    <p class="mb-0 small">Till 12/10 16:10</p>
+                                    <div class="metric-value"><span id="device-status-text">Online</span></div>
+                                    <p id="last-sync-time" class="mb-0 small">Till 12/10 16:10</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-6 col-lg-4">
-                        <div class="card weather-card p-4 rounded-3xl mb-2 h-50">
+                        <div class="card weather-card p-3 rounded-3xl mb-2 h-50 no-extendable">
                             <div class="row text-center">
                                 <div class="col-6">
                                     <i class="fas fa-sunrise fa-3x text-warning mb-2"></i>
@@ -132,17 +132,11 @@
                                 </div>
                             </div>
                             <hr>
-                            <h5 class="fw-normal mt-3">Local Weather Alerts</h5>
+                            <h5 class="fw-normal mt-3">System Status Logs</h5>
                             <div id="alerts-container">
-                                <div class="alert alert-warning py-2 mb-2" role="alert">
-                                    <i class="fas fa-exclamation-triangle"></i> No active warnings.
-                                </div>
-                                <div class="alert alert-info py-2" role="alert">
-                                    <i class="fas fa-info-circle"></i> Low chance of precipitation for the next 6 hours.
-                                </div>
                             </div>
                         </div>
-                        <div id="sensor-container" class="card weather-card p-0 rounded-4 mb-2 h-50">
+                        <div id="sensor-container" class="card weather-card p-0 rounded-4 mb-2 h-50 no-extendable">
                         </div>
                     </div>
 

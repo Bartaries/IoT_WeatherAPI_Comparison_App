@@ -1,15 +1,41 @@
 import os
 import requests
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, json, request, jsonify, render_template
 import logging
 from logs_config import setup_logging
 
 
 app = Flask(__name__)
+DATA_FILE = 'dane.json'
 setup_logging(app, level=logging.DEBUG)
 
-API_KEY = '0b0df8b5c07548df983161807251305' # <------ Nie mam premki więc dużo tych requestów chyba nie można XDDDD albo chyba tylko na żywo
+API_KEY = '0b0df8b5c07548df983161807251305'
 BASE_URL = (f"http://api.weatherapi.com/v1/forecast.json")
+
+def json_data(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            app.logger.info(
+            f"Load file {DATA_FILE}"
+            )
+            return data
+    except FileNotFoundError:
+        print(f"ERROR: Plik {file_path} nie został znaleziony.")
+        app.logger.error(
+            f"No {file_path} file"
+        )
+        return None
+    except json.JSONDecodeError:
+        app.logger.error(
+            f"Parse error in {file_path}"
+        )
+        return None
+    except Exception as e:
+        app.logger.error(
+            f"Uknown error: {e}"
+        )
+        return None
 
 
 @app.route('/api/weather', methods=['GET'])
@@ -53,6 +79,35 @@ def get_weather():
             f"API connection problem: {err}"
         )
         return jsonify({"error": "Błąd połączenia z API pogodowym.", "details": str(err)}), 503
+
+@app.route('/iot/weather', methods=['GET'])
+def check_weather():
+    iot_data = json_data(DATA_FILE)
+
+    if iot_data is None:
+        app.logger.error(
+            f"${DATA_FILE} value is None"
+            )
+        return jsonify({"status": "error", "message": "Unable to load data"}), 500
+    if not isinstance(iot_data, list) or not iot_data:
+        app.logger.error(
+            f"${DATA_FILE} no contain a list"
+            )
+        return jsonify({"status": "error", "message": "JSON file no contain a list"}), 404
+    
+    lastRec = iot_data[len(iot_data)-1]
+    data = {
+        'lastRecord': lastRec,
+        'lastTimestamp': lastRec['timestamp'],
+        'lastTemperature': lastRec['temperature'],
+        'lastHumidity': lastRec['humidity'],
+        'lastSoilIndicator': lastRec['soil'],
+        'length': len(iot_data),
+        'allReceived': iot_data
+    }
+    print(f"Timestamp: {data['lastTimestamp']}, Temp: {data['lastTemperature']}°C, Humidity: {data['lastHumidity']}%, Soil: {data['lastSoilIndicator']}, Total: {data['length']}")
+
+    return jsonify(data)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
