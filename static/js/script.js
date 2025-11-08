@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chartCanvas = document.getElementById('sensor-chart');
     const deviceStatusText = document.getElementById('device-status-text');
     const deviceStatusIcon = document.getElementById('device-status-icon');
+    const weatherDisplayCard = document.getElementById('weather-display-card');
     const state = {
         apiTime: null,
         iotTime: null
@@ -20,7 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialTempData = Array.from({ length: 12 }, () => Math.random() * 5 + 20);
     const initialHumidData = Array.from({ length: 12 }, () => Math.random() * 10 + 60);
 
+   
     const fetchWeather = async (query) => {
+        const cleanQuery = query.trim();
+        
+        if (cleanQuery == '') {
+            addLog("Easter Egg activated: Space Weather.");
+            return handleSpaceWeather();
+        }
+
         try {
             const response = await fetch(`/api/weather?q=${encodeURIComponent(query)}`);
             if (!response.ok) {
@@ -71,12 +80,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const updateWeatherUI = (data) => {
+    const updateWeatherUI = (data, isSpaceWeather = false) => {
         if (!data || !data.forecast || !data.forecast.forecastday || data.forecast.forecastday.length === 0) {
             console.error('Received wrong API:', data);
             addLog("Incomplete server answer.");
             return;
         }
+
+        if (isSpaceWeather) {
+        weatherDisplayCard.classList.add('bg-dark', 'text-white');
+        weatherDisplayCard.classList.remove('bg-white', 'current-weather-card');
+        document.getElementById('rain-chance-container').innerHTML = `<i class="fas fa-satellite"></i> Cosmic Dust: 0%`;
+        document.getElementById('dew-point').textContent = `Dew point N/A`;
+        document.getElementById('sunrise-time').textContent = 'N/A';
+        document.getElementById('sunset-time').textContent = 'N/A';
+        document.getElementById('hourly-forecast-container').innerHTML = '<p class="text-white-50">No hourly forecast in Deep Space.</p>';
+
+    } else {
+        weatherDisplayCard.classList.remove('bg-dark', 'text-white');
+        weatherDisplayCard.classList.add('bg-white', 'current-weather-card');
+    }
 
         const { location, current, forecast } = data;
         const todayForecast = forecast.forecastday[0];
@@ -110,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
     };
+
 
     const initWeather = async () => {
         let success = false;
@@ -312,18 +336,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const handleSpaceWeather = () => {
+        const spaceData = {
+            location: {
+                name: "Deep Space",
+                country: "The Universe"
+            },
+            current: {
+                last_updated: new Date().toISOString().replace('T', ' ').substring(0, 19),
+                temp_c: -270,
+                condition: {
+                    text: "Cosmic Microwave Background",
+                    icon: "//cdn.weatherapi.com/weather/64x64/night/113.png"
+                },
+                feelslike_c: -270,
+                dewpoint_c: 'N/A'
+            },
+            forecast: {
+                forecastday: [{
+                    day: {
+                        maxtemp_c: -270,
+                        mintemp_c: -272.15,
+                        daily_chance_of_rain: 0 
+                    },
+                    astro: {
+                        sunrise: 'N/A',
+                        sunset: 'N/A'
+                    },
+                    hour: []
+                }]
+            }
+        };
+
+        updateWeatherUI(spaceData, true);
+        return true;
+    };
+
     searchForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const city = cityInput.value.trim();
-        if (city) {
-            const apiSuccess = await fetchWeather(city);
+        const cityCleaned = cityInput.value.trim();
+        const cityRaw = cityInput.value; 
+        if (cityRaw.length > 0) { 
+            
+            const apiSuccess = await fetchWeather(cityCleaned); 
             const iotSuccess = await updateReadings();
             
             if (apiSuccess && iotSuccess) {
                 checkDeviceSyncStatus();
             }
             
-            addLog(`New city: ${city}`);
+            addLog(`New city: ${cityCleaned}`);
             cityInput.value = '';
         }
     });
