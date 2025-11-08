@@ -119,8 +119,6 @@ function onWindowResize() {
     }
 }
 
-// --- PĘTLA ANIMACJI ---
-
 function animate() {
     requestAnimationFrame(animate);
 

@@ -191,12 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function checkDeviceSyncStatus(apiTimestampStr, iotTimestampStr, minutesLimit = 15) {
+    function checkDeviceSyncStatus(minutesLimit = 15) {
+            addLog("Multisource time sync status.");
             const parseIotDate = (iotString) => {
                 const [datePart, timePart] = iotString.split(' ');
                 const [day, month, year] = datePart.split('-');
                 const [hours, minutes, seconds] = timePart.split(':');
-                console.log(new Date(`20${year}`, month - 1, day, hours, minutes, seconds));
                 return new Date(`20${year}`, month - 1, day, hours, minutes, seconds);
             };
 
@@ -206,31 +206,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function checkDeviceSyncStatus(minutesLimit = 15) {
                 if (!state.apiTime || !state.iotTime) {
+                    addLog("No timestamp data.");
                     return false; 
                 }
+            }
 
-            const apiDate = parseApiDate(apiTimestampStr);
-            const iotDate = parseIotDate(iotTimestampStr);
+            const apiDate = parseApiDate(state.apiTime);
+            const iotDate = parseIotDate(state.iotTime);
             const apiTimeMs = apiDate.getTime();
             const iotTimeMs = iotDate.getTime();
             const timeDifferenceMs = Math.abs(apiTimeMs - iotTimeMs);
             const limitMs = minutesLimit * 60 * 1000;
-
+            addLog(`Min time difference between devices is ${minutesLimit} min for Online status.`);
             const isOffline = timeDifferenceMs > limitMs;
             const timeDifferenceMinutes = Math.round(timeDifferenceMs / 60000);
-
-            if (!isOffline) {
-                console.log(`❌ STATUS OFFLINE: Różnica (${timeDifferenceMinutes} min) przekracza limit ${minutesLimit} min. Wymagana interwencja!`);
-            } else {
-                console.log(`✅ STATUS ONLINE: Różnica (${timeDifferenceMinutes} min) jest w granicach tolerancji (${minutesLimit} min). Core business OK.`);
-            }
+            addLog(`Delay between API and IoT: ${timeDifferenceMinutes} min.`);
 
             return isOffline;
         }
-    }
 
     function toggleDeviceStatus(isOffline) {
-        if(isOffline) {
+        if(!isOffline) {
                 deviceStatusText.textContent = 'Online';
                 deviceStatusText.classList.remove('text-red-600');
                 deviceStatusText.classList.add('text-green-600');
@@ -336,10 +332,12 @@ document.addEventListener('DOMContentLoaded', () => {
         createChart();
         addLog('Chart initialized.');
         const apiSuccess = await initWeather();
+        addLog(`Loading weather from API: ${apiSuccess}`);
         const iotSuccess = await updateReadings();
+        addLog(`Loading weather from IoT: ${iotSuccess}`);
         
         if (apiSuccess && iotSuccess) {
-            checkDeviceSyncStatus();
+            toggleDeviceStatus(checkDeviceSyncStatus());
         } else {
              toggleDeviceStatus(true); 
         }
