@@ -1,0 +1,5 @@
+2025-11-09 08:21:48,334 - [ERROR] - app - [PID: 11212 - Thread: 11392] - [File: app.py, Line: 51] - Argument 'q' is necessary
+2025-11-09 08:21:48,508 - [INFO] - app - [PID: 11212 - Thread: 11392] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-09 08:21:48,695 - [INFO] - app - [PID: 11212 - Thread: 11392] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-09 08:21:48,803 - [ERROR] - app - [PID: 11212 - Thread: 11392] - [File: app.py, Line: 73] - API error: Server Error
+2025-11-09 08:21:48,807 - [ERROR] - app - [PID: 11212 - Thread: 11392] - [File: app.py, Line: 78] - API connection problem: Connection timed out

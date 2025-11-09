@@ -4,7 +4,6 @@ from flask import Flask, json, request, jsonify, render_template
 import logging
 from logs_config import setup_logging
 
-
 app = Flask(__name__)
 DATA_FILE = 'dane.json'
 setup_logging(app, level=logging.DEBUG)
