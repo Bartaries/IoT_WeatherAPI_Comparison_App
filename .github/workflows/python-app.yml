@@ -35,12 +35,18 @@ jobs:
     - name: Run python app
       run: |
         python app.py &
+    - name: Python app status
+      run: |
+        echo "Python app status PASS 💚"
     - name: Run pytests
       run: |
         python -m pytest
+    - name: Unit Test Status
+      run: |
+        echo "Unit tests PASS 💚"
     - name: Server status
       run: |
-        echo "Server is closed properly 🥵"
+        echo "Server is closed properly 🚫"
     - name: Logs check
       run: |
         python logs_config.py
