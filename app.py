@@ -86,12 +86,12 @@ def check_weather():
 
     if iot_data is None:
         app.logger.error(
-            f"${DATA_FILE} value is None"
+            f"{DATA_FILE} value is None"
             )
         return jsonify({"status": "error", "message": "Unable to load data"}), 500
     if not isinstance(iot_data, list) or not iot_data:
         app.logger.error(
-            f"${DATA_FILE} no contain a list"
+            f"{DATA_FILE} no contain a list"
             )
         return jsonify({"status": "error", "message": "JSON file no contain a list"}), 404
     
