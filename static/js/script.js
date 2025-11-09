@@ -187,14 +187,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let { timestamp, temperature, humidity, soil } = result
 
-            if(soil){soil = 'True'; soilIndicatorIcon.classList.remove('text-warning'); soilIndicatorIcon.classList.add('text-success');}
-            else{soil = 'False'; soilIndicatorIcon.classList.remove('text-success'); soilIndicatorIcon.classList.add('text-warning');};
+            if(soil){soil >= 1; soilIndicatorIcon.classList.remove('text-warning'); soilIndicatorIcon.classList.add('text-success');}
+            else{soil == 0 ; soilIndicatorIcon.classList.remove('text-success'); soilIndicatorIcon.classList.add('text-warning');};
             
             state.iotTime = timestamp;
             temperatureValue.textContent = `${temperature}°C`;
             humidityValue.textContent = `${humidity}%`;
             lastSyncTime.textContent = state.iotTime;
-            soilIndicator.innerHTML = `${soil}`;
+            soilIndicator.innerHTML = `${soil}%`;
 
             if (chart) {
                 chart.data.datasets[0].data.shift();
