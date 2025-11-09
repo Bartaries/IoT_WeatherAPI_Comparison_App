@@ -1,6 +1,7 @@
 import os
 import requests
-from flask import Flask, json, request, jsonify, render_template
+import json
+from flask import Flask, request, jsonify, render_template
 import logging
 from logs_config import setup_logging
 
