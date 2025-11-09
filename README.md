@@ -50,12 +50,40 @@ If you notice problem with flask command not found please try:
 
 ## Testing
 
-**Wojtek please help**
+**CI Python Application Workflow**
 
+- This workflow runs automatically on every push to the main branch.
+- It also runs on every pull request targeting the main branch.
 
-We maintain code quality through a rigorous testing process:<br>
-Automated Tests: <br>
-Manual Tests:<br>
+**Environment:**
+
+- The job runs on the latest Ubuntu virtual environment.
+- It checks out the repository code.
+- It sets up and configures Python 3.10.
+
+**Testing and Validation Steps:**
+
+**Install Dependencies:**
+
+- Upgrades pip (Python's package installer).
+- Installs necessary testing and application libraries, including pytest, pytest-mock, flake8, requests, Flask, and any packages listed in requirements.txt (if the file exists).
+
+**Lint with flake8:**
+
+- Performs static code analysis using flake8.
+- This step checks for major syntax errors (like E9, F63) and basic code style.
+
+**Run Application (Background):**
+
+- Executes the main app.py script in the background (&).
+
+**Run Pytests:**
+
+- Executes the main test suite using the pytest command. This is expected to run all discovered unit tests.
+
+**Logs Config Check:**
+
+- Runs the logs_config.py script.
 
 ## Authors
 * Wojciech Mycek (Tester / Machine Learning Engineer)
