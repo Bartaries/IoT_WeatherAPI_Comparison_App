@@ -50,4 +50,7 @@ jobs:
     - name: Logs check
       run: |
         python logs_config.py
+    - name: Unit Test Status
+      run: |
+        echo "Logs config check PASS 💚"
         
