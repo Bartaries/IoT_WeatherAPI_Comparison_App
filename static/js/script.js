@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addLog('Dashboard initialized successfully.');
 
     setInterval(async () => {
-            await fetchWeather(cityInput.value.trim() || 'Wroclaw');
+            await fetchWeather(cityInput.value.trim());
             const iotSuccess = await updateReadings();
             
             if (state.apiTime && iotSuccess) {
