@@ -1,35 +1,48 @@
-name: Deploy static content to Pages
+name: Walidacja JavaScript (Lint + Test)
 
 on:
   push:
     branches: ["main"]
-
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  pull_request:
+    branches: ["main", "develop"]
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  linting:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Klonowanie repo (Checkout)
         uses: actions/checkout@v4
-
-      - name: Set up Node.js
+        
+      - name: Ustawienie Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20.x
           cache: 'npm'
 
-      - name: Install Dependencies (Tak jak Bóg przykazał)
+      - name: Instalacja zależności
+        run: npm ci 
+        
+      - name: Odpalenie Lintera
+        run: npm run lint
+
+  testing:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      - name: Klonowanie repo (Checkout)
+        uses: actions/checkout@v4
+        
+      - name: Ustawienie Node.js (wersja z matrixa)
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Instalacja zależności
         run: npm ci
+        
+      - name: Odpalenie Testów
+        run: npm run test
