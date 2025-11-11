@@ -4,7 +4,8 @@
   "description": "This project delivers a robust solution by integrating real-time hardware weather monitoring (via ESP32 micro-controller) with a Machine Learning (ML) model for predictive analytics. The entire system is packaged as a web application, providing users with an aesthetic, browser-based Graphical User Interface (GUI).",
   "main": "app.py",
   "scripts": {
-    "test": "https://github.com/Bartaries/IoT_WeatherAPI_Comparison_App/tree/main/.github/workflows"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
