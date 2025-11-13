@@ -116,4 +116,4 @@ If you notice problem with flask command not found please try:
 * Wojciech Mycek (Tester / Machine Learning Engineer)
 * Bartosz Baran (Full Stack Dev)
 * Piotr Mania (Product Owner)
-* Szymon Roszyk (Embedded System Engineer)
+* Bruno Roszyk (Embedded System Engineer)
