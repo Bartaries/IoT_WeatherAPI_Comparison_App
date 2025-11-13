@@ -1,0 +1,194 @@
+2025-11-10 22:41:19,322 - [INFO] - app - [PID: 4588 - Thread: 26268] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:41:21,720 - [INFO] - app - [PID: 4588 - Thread: 24028] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:41:21,740 - [INFO] - app - [PID: 4588 - Thread: 30196] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:41:50,778 - [INFO] - app - [PID: 4588 - Thread: 15820] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:41:53,750 - [INFO] - app - [PID: 4588 - Thread: 3540] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:41:53,766 - [INFO] - app - [PID: 4588 - Thread: 31084] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:42:21,121 - [INFO] - app - [PID: 4588 - Thread: 4800] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:42:51,105 - [INFO] - app - [PID: 4588 - Thread: 32000] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:43:21,107 - [INFO] - app - [PID: 4588 - Thread: 1988] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:43:51,118 - [INFO] - app - [PID: 4588 - Thread: 3272] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:44:21,101 - [INFO] - app - [PID: 4588 - Thread: 21264] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:44:51,106 - [INFO] - app - [PID: 4588 - Thread: 32332] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:45:21,119 - [INFO] - app - [PID: 4588 - Thread: 8452] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:45:51,107 - [INFO] - app - [PID: 4588 - Thread: 29520] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:46:21,116 - [INFO] - app - [PID: 4588 - Thread: 26184] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:46:51,121 - [INFO] - app - [PID: 4588 - Thread: 31052] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:47:07,217 - [INFO] - app - [PID: 21696 - Thread: 28152] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:47:07,244 - [ERROR] - app - [PID: 21696 - Thread: 8164] - [File: app.py, Line: 25] - No gowno.json file
+2025-11-10 22:47:07,245 - [ERROR] - app - [PID: 21696 - Thread: 8164] - [File: app.py, Line: 88] - $gowno.json value is None
+2025-11-10 22:47:33,227 - [INFO] - app - [PID: 16652 - Thread: 24944] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:47:33,278 - [ERROR] - app - [PID: 16652 - Thread: 736] - [File: app.py, Line: 25] - No fake.json file
+2025-11-10 22:47:33,280 - [ERROR] - app - [PID: 16652 - Thread: 736] - [File: app.py, Line: 88] - $fake.json value is None
+2025-11-10 22:48:03,118 - [ERROR] - app - [PID: 16652 - Thread: 26300] - [File: app.py, Line: 25] - No fake.json file
+2025-11-10 22:48:03,119 - [ERROR] - app - [PID: 16652 - Thread: 26300] - [File: app.py, Line: 88] - $fake.json value is None
+2025-11-10 22:48:33,111 - [ERROR] - app - [PID: 16652 - Thread: 25312] - [File: app.py, Line: 25] - No fake.json file
+2025-11-10 22:48:33,112 - [ERROR] - app - [PID: 16652 - Thread: 25312] - [File: app.py, Line: 88] - $fake.json value is None
+2025-11-10 22:48:42,650 - [INFO] - app - [PID: 12624 - Thread: 32072] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:48:42,667 - [WARNING] - app - [PID: 12624 - Thread: 26860] - [File: app.py, Line: 25] - No fake.json file
+2025-11-10 22:48:42,667 - [ERROR] - app - [PID: 12624 - Thread: 26860] - [File: app.py, Line: 88] - $fake.json value is None
+2025-11-10 22:49:13,110 - [WARNING] - app - [PID: 12624 - Thread: 12540] - [File: app.py, Line: 25] - No fake.json file
+2025-11-10 22:49:13,111 - [ERROR] - app - [PID: 12624 - Thread: 12540] - [File: app.py, Line: 88] - $fake.json value is None
+2025-11-10 22:49:20,762 - [INFO] - app - [PID: 12560 - Thread: 11808] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:49:20,789 - [DEBUG] - app - [PID: 12560 - Thread: 10228] - [File: app.py, Line: 25] - No fake.json file
+2025-11-10 22:49:20,795 - [ERROR] - app - [PID: 12560 - Thread: 10228] - [File: app.py, Line: 88] - $fake.json value is None
+2025-11-10 22:49:44,605 - [INFO] - app - [PID: 24204 - Thread: 21196] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:49:44,690 - [CRITICAL] - app - [PID: 24204 - Thread: 19856] - [File: app.py, Line: 25] - No fake.json file
+2025-11-10 22:49:44,690 - [ERROR] - app - [PID: 24204 - Thread: 19856] - [File: app.py, Line: 88] - $fake.json value is None
+2025-11-10 22:50:15,105 - [INFO] - app - [PID: 26248 - Thread: 1988] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:50:45,113 - [INFO] - app - [PID: 26248 - Thread: 24208] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:51:15,114 - [INFO] - app - [PID: 26248 - Thread: 25460] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:51:44,472 - [INFO] - app - [PID: 26248 - Thread: 25124] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:52:15,116 - [INFO] - app - [PID: 26248 - Thread: 10220] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:52:45,109 - [INFO] - app - [PID: 26248 - Thread: 14320] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:53:57,107 - [INFO] - app - [PID: 26248 - Thread: 11192] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:54:34,635 - [INFO] - app - [PID: 26248 - Thread: 15388] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:54:45,108 - [INFO] - app - [PID: 26248 - Thread: 17664] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:55:14,466 - [INFO] - app - [PID: 26248 - Thread: 24788] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:55:45,117 - [INFO] - app - [PID: 26248 - Thread: 22568] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:56:15,115 - [INFO] - app - [PID: 26248 - Thread: 2416] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:56:57,128 - [INFO] - app - [PID: 26248 - Thread: 23476] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:57:57,113 - [INFO] - app - [PID: 26248 - Thread: 28020] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:58:26,827 - [INFO] - app - [PID: 26248 - Thread: 3012] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:58:30,395 - [INFO] - app - [PID: 26248 - Thread: 12792] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:58:30,459 - [INFO] - app - [PID: 26248 - Thread: 28940] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:58:30,475 - [INFO] - app - [PID: 26248 - Thread: 32296] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:58:32,842 - [INFO] - app - [PID: 26248 - Thread: 29264] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:58:32,871 - [INFO] - app - [PID: 26248 - Thread: 20524] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:58:34,872 - [INFO] - app - [PID: 26248 - Thread: 23468] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:58:34,906 - [INFO] - app - [PID: 26248 - Thread: 8504] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:58:36,540 - [INFO] - app - [PID: 26248 - Thread: 29260] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:58:36,562 - [INFO] - app - [PID: 26248 - Thread: 6444] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:58:38,280 - [INFO] - app - [PID: 26248 - Thread: 24636] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:58:38,296 - [INFO] - app - [PID: 26248 - Thread: 5420] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:59:09,122 - [INFO] - app - [PID: 26248 - Thread: 9716] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:59:24,346 - [INFO] - app - [PID: 26248 - Thread: 13152] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:59:24,393 - [INFO] - app - [PID: 26248 - Thread: 1988] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:59:24,407 - [INFO] - app - [PID: 26248 - Thread: 21512] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:59:26,999 - [INFO] - app - [PID: 26248 - Thread: 6684] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:59:27,020 - [INFO] - app - [PID: 26248 - Thread: 15568] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:59:28,533 - [INFO] - app - [PID: 26248 - Thread: 16264] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:59:28,552 - [INFO] - app - [PID: 26248 - Thread: 17352] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:59:30,271 - [INFO] - app - [PID: 26248 - Thread: 21932] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:59:30,282 - [INFO] - app - [PID: 26248 - Thread: 1516] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 22:59:31,697 - [INFO] - app - [PID: 26248 - Thread: 4704] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 22:59:31,711 - [INFO] - app - [PID: 26248 - Thread: 12712] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:00:02,113 - [INFO] - app - [PID: 26248 - Thread: 9108] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:00:32,120 - [INFO] - app - [PID: 26248 - Thread: 8876] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:01:02,111 - [INFO] - app - [PID: 26248 - Thread: 6028] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:01:32,113 - [INFO] - app - [PID: 26248 - Thread: 28096] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:02:02,120 - [INFO] - app - [PID: 26248 - Thread: 11380] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:02:32,113 - [INFO] - app - [PID: 26248 - Thread: 8736] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:03:57,107 - [INFO] - app - [PID: 26248 - Thread: 26852] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:04:57,103 - [INFO] - app - [PID: 26248 - Thread: 14784] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:05:13,480 - [INFO] - app - [PID: 26248 - Thread: 27924] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:05:15,709 - [INFO] - app - [PID: 26248 - Thread: 3152] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:05:15,726 - [INFO] - app - [PID: 26248 - Thread: 9696] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:05:17,681 - [INFO] - app - [PID: 26248 - Thread: 10644] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:05:17,701 - [INFO] - app - [PID: 26248 - Thread: 32416] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:05:19,572 - [INFO] - app - [PID: 26248 - Thread: 12724] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:05:19,588 - [INFO] - app - [PID: 26248 - Thread: 21312] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:05:50,118 - [INFO] - app - [PID: 26248 - Thread: 31616] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:06:20,119 - [INFO] - app - [PID: 26248 - Thread: 7552] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:06:50,115 - [INFO] - app - [PID: 26248 - Thread: 26772] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:07:20,119 - [INFO] - app - [PID: 26248 - Thread: 18304] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:07:50,105 - [INFO] - app - [PID: 26248 - Thread: 30420] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:08:20,113 - [INFO] - app - [PID: 26248 - Thread: 24588] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:08:57,113 - [INFO] - app - [PID: 26248 - Thread: 28656] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:09:57,121 - [INFO] - app - [PID: 26248 - Thread: 13416] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:10:57,110 - [INFO] - app - [PID: 26248 - Thread: 11332] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:11:57,114 - [INFO] - app - [PID: 26248 - Thread: 8812] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:12:57,109 - [INFO] - app - [PID: 26248 - Thread: 29104] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:13:57,114 - [INFO] - app - [PID: 26248 - Thread: 22356] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:14:57,111 - [INFO] - app - [PID: 26248 - Thread: 25564] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:15:57,111 - [INFO] - app - [PID: 26248 - Thread: 12900] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:16:57,112 - [INFO] - app - [PID: 26248 - Thread: 24868] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:17:57,116 - [INFO] - app - [PID: 26248 - Thread: 29012] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:18:57,108 - [INFO] - app - [PID: 26248 - Thread: 24784] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:19:57,113 - [INFO] - app - [PID: 26248 - Thread: 27888] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:20:57,106 - [INFO] - app - [PID: 26248 - Thread: 13172] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:21:57,118 - [INFO] - app - [PID: 26248 - Thread: 2484] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:22:57,117 - [INFO] - app - [PID: 26248 - Thread: 25284] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:23:14,405 - [INFO] - app - [PID: 26248 - Thread: 28652] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:23:14,425 - [INFO] - app - [PID: 26248 - Thread: 12784] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:23:45,109 - [INFO] - app - [PID: 26248 - Thread: 20536] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:24:15,110 - [INFO] - app - [PID: 26248 - Thread: 18704] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:25:09,343 - [INFO] - app - [PID: 26248 - Thread: 31616] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:25:09,360 - [INFO] - app - [PID: 26248 - Thread: 12560] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:25:39,122 - [INFO] - app - [PID: 26248 - Thread: 28288] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:26:09,115 - [INFO] - app - [PID: 26248 - Thread: 22688] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:26:39,110 - [INFO] - app - [PID: 26248 - Thread: 23536] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:27:09,112 - [INFO] - app - [PID: 26248 - Thread: 31040] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:27:39,107 - [INFO] - app - [PID: 26248 - Thread: 26120] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:28:09,110 - [INFO] - app - [PID: 26248 - Thread: 2416] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:28:57,111 - [INFO] - app - [PID: 26248 - Thread: 25400] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:29:05,724 - [INFO] - app - [PID: 26248 - Thread: 31732] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:29:05,989 - [INFO] - app - [PID: 26248 - Thread: 15656] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:29:36,111 - [INFO] - app - [PID: 26248 - Thread: 19248] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:29:48,178 - [INFO] - app - [PID: 26248 - Thread: 26872] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:29:48,259 - [INFO] - app - [PID: 26248 - Thread: 4420] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:30:17,961 - [INFO] - app - [PID: 26248 - Thread: 31868] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:30:48,108 - [INFO] - app - [PID: 26248 - Thread: 2356] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:31:18,112 - [INFO] - app - [PID: 26248 - Thread: 19824] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:31:47,964 - [INFO] - app - [PID: 26248 - Thread: 18172] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:31:54,670 - [INFO] - app - [PID: 26248 - Thread: 13052] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:31:54,689 - [INFO] - app - [PID: 26248 - Thread: 7592] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:32:12,050 - [INFO] - app - [PID: 26248 - Thread: 18180] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:32:12,072 - [INFO] - app - [PID: 26248 - Thread: 27460] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:32:36,633 - [INFO] - app - [PID: 26248 - Thread: 13816] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:32:36,651 - [INFO] - app - [PID: 26248 - Thread: 17288] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:32:41,161 - [INFO] - app - [PID: 26248 - Thread: 28220] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:32:41,180 - [INFO] - app - [PID: 26248 - Thread: 28448] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:33:09,748 - [INFO] - app - [PID: 26248 - Thread: 20688] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:33:40,114 - [INFO] - app - [PID: 26248 - Thread: 19880] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:34:10,114 - [INFO] - app - [PID: 26248 - Thread: 30400] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:34:40,112 - [INFO] - app - [PID: 26248 - Thread: 13248] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:35:09,803 - [INFO] - app - [PID: 26248 - Thread: 31076] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:35:10,241 - [INFO] - app - [PID: 26248 - Thread: 18104] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:35:40,121 - [INFO] - app - [PID: 26248 - Thread: 5860] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:36:10,115 - [INFO] - app - [PID: 26248 - Thread: 15744] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:36:23,746 - [INFO] - app - [PID: 26248 - Thread: 26516] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:36:23,801 - [INFO] - app - [PID: 26248 - Thread: 24368] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:36:54,107 - [INFO] - app - [PID: 26248 - Thread: 11376] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:37:01,736 - [INFO] - app - [PID: 26248 - Thread: 11332] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:37:01,757 - [INFO] - app - [PID: 26248 - Thread: 21804] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:37:26,274 - [INFO] - app - [PID: 26248 - Thread: 11616] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:37:26,615 - [INFO] - app - [PID: 26248 - Thread: 31264] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:37:44,290 - [INFO] - app - [PID: 26248 - Thread: 15716] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:37:44,332 - [INFO] - app - [PID: 26248 - Thread: 17632] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:38:14,064 - [INFO] - app - [PID: 26248 - Thread: 28288] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:38:30,206 - [INFO] - app - [PID: 26248 - Thread: 22264] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:38:30,307 - [INFO] - app - [PID: 26248 - Thread: 3776] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:39:00,003 - [INFO] - app - [PID: 26248 - Thread: 2140] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:39:30,015 - [INFO] - app - [PID: 26248 - Thread: 9248] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:40:00,006 - [INFO] - app - [PID: 26248 - Thread: 27332] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:40:30,454 - [INFO] - app - [PID: 26248 - Thread: 25828] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:40:30,469 - [INFO] - app - [PID: 26248 - Thread: 29048] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:41:00,116 - [INFO] - app - [PID: 26248 - Thread: 9488] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:41:30,118 - [INFO] - app - [PID: 26248 - Thread: 11192] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:42:00,113 - [INFO] - app - [PID: 26248 - Thread: 7520] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:42:30,100 - [INFO] - app - [PID: 26248 - Thread: 26524] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:43:00,105 - [INFO] - app - [PID: 26248 - Thread: 30548] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:43:29,696 - [INFO] - app - [PID: 26248 - Thread: 15072] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:43:56,639 - [INFO] - app - [PID: 26248 - Thread: 12792] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:43:56,654 - [INFO] - app - [PID: 26248 - Thread: 18304] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:44:27,111 - [INFO] - app - [PID: 26248 - Thread: 9712] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:44:32,500 - [INFO] - app - [PID: 26248 - Thread: 30300] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:44:32,516 - [INFO] - app - [PID: 26248 - Thread: 14824] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:44:49,420 - [INFO] - app - [PID: 26248 - Thread: 27744] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:44:49,434 - [INFO] - app - [PID: 26248 - Thread: 21340] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:45:05,000 - [INFO] - app - [PID: 26248 - Thread: 14064] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:45:05,022 - [INFO] - app - [PID: 26248 - Thread: 31904] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:45:19,025 - [INFO] - app - [PID: 26248 - Thread: 27808] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:45:19,039 - [INFO] - app - [PID: 26248 - Thread: 24976] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:45:48,847 - [INFO] - app - [PID: 26248 - Thread: 10852] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:46:18,848 - [INFO] - app - [PID: 26248 - Thread: 9680] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:46:48,847 - [INFO] - app - [PID: 26248 - Thread: 17900] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:47:18,847 - [INFO] - app - [PID: 26248 - Thread: 21144] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:47:48,848 - [INFO] - app - [PID: 26248 - Thread: 23064] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:48:18,851 - [INFO] - app - [PID: 26248 - Thread: 16084] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:48:48,848 - [INFO] - app - [PID: 26248 - Thread: 11144] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:49:08,300 - [INFO] - app - [PID: 26248 - Thread: 17280] - [File: app.py, Line: 68] - API data download succesfully
+2025-11-10 23:49:08,318 - [INFO] - app - [PID: 26248 - Thread: 24680] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:49:18,849 - [INFO] - app - [PID: 26248 - Thread: 19668] - [File: app.py, Line: 19] - Load file dane.json
+2025-11-10 23:49:49,111 - [INFO] - app - [PID: 26248 - Thread: 27968] - [File: app.py, Line: 19] - Load file dane.json

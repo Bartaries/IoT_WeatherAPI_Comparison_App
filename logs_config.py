@@ -47,6 +47,9 @@ stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(stream_formatter)
 
 def setup_logging(app, level=logging.INFO):
+    for handler in app.logger.handlers[:]:
+        app.logger.removeHandler(handler)
+
     logger = app.logger
     logger.setLevel(level)
 

@@ -36,7 +36,7 @@ function init() {
 
     const fbxLoader = new FBXLoader();
     fbxLoader.load(
-        '/static/models/DHT22.fbx',
+        '/static/models/dht22.fbx',
         function(object) {
    
             object.traverse(function(child) {
