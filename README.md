@@ -33,14 +33,17 @@ At first you must declare your **Wi-Fi connection and GitHub PAT Key in ESP_CODE
 // ------------------------ C O N F I G ------------------------------
 
 // --- Configure WiFi ---
+
 const char* ssid = ""; **//SSID your home network**
 const char* password = ""; **// password**
 
 // --- Configure GitHub ---
+
 const char* githubToken = "";  // <<< **Your Github PAT token **
 
 
 // -- **If you want to use our Github repo then don't change it! Else if you want declare another GitHub repo then you must provide repo owner, repo name and file path to your .json file in your repo** --
+
 const char* githubUser = "Bartaries";     // **repo owner name** (if you have opened repo - you can find this in link, just after first slash (github.com/**USERNAME**/...))        
 const char* githubRepo = "IoT_WeatherAPI_Comparison_App";          // **repo name**
 const char* githubFilePath = "dane.json";          // **name/path of updated .json file**
