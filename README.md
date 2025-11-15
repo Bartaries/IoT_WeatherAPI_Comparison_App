@@ -16,7 +16,7 @@ Hardware: 💻 ESP32 micro-controller<br>
 Back-end/Server: Python with the Flask framework (for handling the API, data streaming, and business logic).<br>
 Machine Learning: Python libraries such as Scikit-learn, Pandas, and NumPy.<br>
 Front-end: ☕ JavaScript, HTML5, and CSS3 (for the responsive and dynamic User Interface).<br>
-Data Visualization: **Bartek and Wojtek I need your help here**<br>
+Data Visualization: Chart.js, Bootstrap library and Font Awesome<br>
 Version Control: 🐙 Git & GitHub
 
 
