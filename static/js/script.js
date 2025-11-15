@@ -390,8 +390,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    createChart();
     async function mainOrchestrator() {
-        createChart();
         addLog('Chart initialized.');
         const apiSuccess = await initWeather();
         addLog(`Loading weather from API: ${apiSuccess}`);
@@ -414,6 +414,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkDeviceSyncStatus();
             }
         }, 30000);
+
+    setInterval(createChart, 1*60*60*1000)
 
     mainOrchestrator();
 });
