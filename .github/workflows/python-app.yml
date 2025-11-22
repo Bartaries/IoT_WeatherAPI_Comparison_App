@@ -53,4 +53,8 @@ jobs:
     - name: Logs config status
       run: |
         echo "Logs config check PASS 💚"
+    - name: Check ML file
+      run: |
+        cd /Machine-learning
+        python ML-model.py
         
