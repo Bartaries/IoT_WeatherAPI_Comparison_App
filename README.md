@@ -30,9 +30,9 @@ These instructions will guide you through setting up and running the project loc
 
 At first you must declare your **Wi-Fi connection and GitHub PAT Key in ESP_CODE.ino**. To do this follow to the 'CONFIG' section in code:
 
-// ------------------------ C O N F I G ------------------------------
+```// ------------------------ C O N F I G ------------------------------
 
-// --- Configure WiFi ---
+// --- Configure WiFi ---`
 
 const char* ssid = ""; **//SSID your home network**
 
@@ -53,6 +53,7 @@ const char* githubFilePath = "dane.json";          // **name/path of updated .js
 
 
 // ---------------------- E N D -------------------------------
+```
 
 The second one is just connect device to the power supply (USB A) with at least 5V and 1000mA.
 Now you can PLUG your device into the ground outside where you want to collect your data **(check if your Wi-Fi connection is in range and have access to the internet to upload your data!)**
