@@ -4,6 +4,7 @@ import json
 from flask import Flask, request, jsonify, render_template
 import logging
 from logs_config import setup_logging
+from Machine_learning.ML_model import *
 
 app = Flask(__name__)
 DATA_FILE = 'dane.json'
@@ -108,6 +109,22 @@ def check_weather():
     print(f"Timestamp: {data['lastTimestamp']}, Temp: {data['lastTemperature']}°C, Humidity: {data['lastHumidity']}%, Soil: {data['lastSoilIndicator']}, Total: {data['length']}")
 
     return jsonify(data)
+
+@app.route('/prediction', methods=['GET'])
+def ml_trigger():
+    try:
+        predict_and_plot()
+        app.logger.info(
+            f"ML Model triggered correctly"
+        )
+        return jsonify('OK'), 200
+    except Exception as e:
+        app.logger.error(
+            f"{e}"
+        )
+        return jsonify('NOK'), 500
+    
+    
 
 @app.route('/', methods=['GET', 'POST'])
 def index():

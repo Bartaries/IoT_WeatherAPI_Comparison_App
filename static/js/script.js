@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const deviceStatusText = document.getElementById('device-status-text');
     const deviceStatusIcon = document.getElementById('device-status-icon');
     const weatherDisplayCard = document.getElementById('weather-display-card');
+    const mlPredictImg = document.getElementById('prediction-image');
     const state = {
         apiTime: null,
         iotTime: null
@@ -404,11 +405,42 @@ document.addEventListener('DOMContentLoaded', () => {
              toggleDeviceStatus(true); 
         }
     }
+
+    async function predictionDisplay(data) {
+    try {
+        const response = await fetch('/prediction');
+            if (!response.ok) {
+                throw new Error(`Error HTTP! Status: ${response.status}`);
+            }
+        if (!response.ok) {
+            throw new Error(`Błąd sieciowy HTTP! Status: ${response.status}`);
+        }
+        const result = await response.json();
+
+        const imgPath = 'static/img/wykres_analiza.jpg';
+        const newImg = document.createElement('img');
+
+        newImg.src = imgPath;
+        newImg.alt = "AI Prediction Result";
+        newImg.style.width = '100%';
+
+        if (mlPredictImg) {
+            mlPredictImg.replaceChildren(newImg);
+        }
+        
+        return result;
+
+        } catch (error) {
+            console.error(error);
+        }
+        
+    }
     addLog('Dashboard initialized successfully.');
 
     setInterval(async () => {
             await fetchWeather(cityInput.value.trim() || 'Wroclaw');
             const iotSuccess = await updateReadings();
+            await predictionDisplay()
             
             if (state.apiTime && iotSuccess) {
                 checkDeviceSyncStatus();
