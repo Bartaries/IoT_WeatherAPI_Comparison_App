@@ -6,10 +6,15 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from typing import List, Dict, Any
+import os
 
 FILENAME = 'iot_data_full.json'
 OUTPUT_FILE = 'predictions.json'
-CHART_OUTPUT_FILE = 'wykres_analiza.jpg' 
+
+SERVER_IMG_DIR = '/static/img'
+CHART_FILENAME = 'wykres_analiza.png'
+CHART_OUTPUT_FILE = os.path.join(SERVER_IMG_DIR, CHART_FILENAME)
+
 PREDICT_STEPS = 144
 TIME_STEP_SECONDS = 600
 
@@ -81,6 +86,7 @@ def predict_and_plot() -> None:
         plt.style.use('ggplot')
 
     fig, axs = plt.subplots(3, 1, figsize=(14, 12), sharex=True)
+    
     plt.subplots_adjust(hspace=0.15)
     fig.suptitle('Analiza i Predykcja Warunków Środowiskowych', fontsize=20, fontweight='bold', y=0.95)
 
@@ -117,7 +123,8 @@ def predict_and_plot() -> None:
     plt.xticks(rotation=0, ha='center')
 
     try:
-        fig.savefig(CHART_OUTPUT_FILE, format='jpg', dpi=300, bbox_inches='tight', facecolor='white')
+        os.makedirs(SERVER_IMG_DIR, exist_ok=True)
+        fig.savefig(CHART_OUTPUT_FILE, format='png', dpi=300, bbox_inches='tight', transparent=True)
         print(f"Chart saved to {CHART_OUTPUT_FILE}")
     except Exception as e:
         print(f"Error saving chart: {e}")
