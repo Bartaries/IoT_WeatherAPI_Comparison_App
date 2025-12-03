@@ -5,14 +5,14 @@ from sklearn.ensemble import RandomForestRegressor
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-from typing import List, Dict, Any
+from typing import Dict
 import os
 
 FILENAME = 'iot_data_full.json'
 OUTPUT_FILE = 'predictions.json'
 
 SERVER_IMG_DIR = '/static/img'
-CHART_FILENAME = 'wykres_analiza.png'
+CHART_FILENAME = 'wykres_analiza.png' 
 CHART_OUTPUT_FILE = os.path.join(SERVER_IMG_DIR, CHART_FILENAME)
 
 PREDICT_STEPS = 144
@@ -46,8 +46,7 @@ def predict_and_plot() -> None:
     targets = ['temperature', 'humidity', 'soil']
     
     for target in targets:
-        if target not in df.columns:
-            continue
+        if target not in df.columns: continue
         
         y = df[target].values
         model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
@@ -75,9 +74,8 @@ def predict_and_plot() -> None:
         results[target] = final_pred
 
     results['timestamp'] = results['timestamp_dt'].dt.strftime('%d-%m-%y %H:%M:%S')
-    
-    cols_to_save = ['timestamp'] + [t for t in targets if t in results.columns]
-    results[cols_to_save].to_json(OUTPUT_FILE, orient='records', indent=2)
+    cols = ['timestamp'] + [t for t in targets if t in results.columns]
+    results[cols].to_json(OUTPUT_FILE, orient='records', indent=2)
     print(f"Saved data to: {OUTPUT_FILE}")
 
     try:
@@ -86,7 +84,8 @@ def predict_and_plot() -> None:
         plt.style.use('ggplot')
 
     fig, axs = plt.subplots(3, 1, figsize=(14, 12), sharex=True)
-    
+    fig.patch.set_alpha(0.0)
+
     plt.subplots_adjust(hspace=0.15)
     fig.suptitle('Analiza i Predykcja Warunków Środowiskowych', fontsize=20, fontweight='bold', y=0.95)
 
