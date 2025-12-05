@@ -73,18 +73,19 @@
   },
   {
     "timestamp":"22-11-25 18:44:43",
+    "temperature":23.8,
     "humidity":50,
     "soil":28
   },
   {
     "timestamp":"22-11-25 18:54:43",
-    "temperature":24.0,
+    "temperature":23.8,
     "humidity":51,
     "soil":29
   },
   {
     "timestamp":"22-11-25 19:04:43",
-    "temperature":23.8,
+    "temperature":23.7,
     "humidity":51,
     "soil":28
   },
@@ -96,37 +97,37 @@
   },
   {
     "timestamp":"22-11-25 19:24:43",
-    "temperature":23.1,
-    "humidity":53,
+    "temperature":23.4,
+    "humidity":52,
     "soil":27
   },
   {
     "timestamp":"22-11-25 19:34:43",
-    "temperature":22.9,
+    "temperature":23.0,
     "humidity":52,
     "soil":28
   },
   {
     "timestamp":"22-11-25 19:44:43",
-    "temperature":22.6,
+    "temperature":22.8,
     "humidity":53,
     "soil":27
   },
   {
     "timestamp":"22-11-25 19:54:43",
-    "temperature":22.4,
+    "temperature":22.7,
     "humidity":54,
     "soil":30
   },
   {
     "timestamp":"22-11-25 20:04:43",
-    "temperature":22.5,
+    "temperature":22.4,
     "humidity":54,
     "soil":28
   },
   {
     "timestamp":"22-11-25 20:14:43",
-    "temperature":22.1,
+    "temperature":22.2,
     "humidity":53,
     "soil":27
   },
@@ -138,13 +139,13 @@
   },
   {
     "timestamp":"22-11-25 20:34:43",
-    "temperature":21.5,
+    "temperature":21.4,
     "humidity":55,
     "soil":27
   },
   {
     "timestamp":"22-11-25 20:44:43",
-    "temperature":21.2,
+    "temperature":21.1,
     "humidity":57,
     "soil":27
   },
@@ -162,25 +163,25 @@
   },
   {
     "timestamp":"22-11-25 21:14:43",
-    "temperature":20.4,
+    "temperature":20.3,
     "humidity":58,
-    "soil":27
+    "soil":28
   },
   {
     "timestamp":"22-11-25 21:24:43",
-    "temperature":20.3,
+    "temperature":20.4,
     "humidity":59,
-    "soil":26
+    "soil":27
   },
   {
     "timestamp":"22-11-25 21:34:43",
-    "temperature":19.8,
+    "temperature":19.7,
     "humidity":60,
     "soil":26
   },
   {
     "timestamp":"22-11-25 21:44:43",
-    "temperature":19.7,
+    "temperature":19.6,
     "humidity":61,
     "soil":26
   },
@@ -188,11 +189,10 @@
     "timestamp":"22-11-25 21:54:43",
     "temperature":19.6,
     "humidity":60,
-    "soil":26
+    "soil":27
   },
   {
     "timestamp":"22-11-25 22:04:43",
-    "temperature":19.0,
     "temperature":19.1,
     "humidity":62,
     "soil":27
