@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const result = await response.json();
 
-        const imgPath = 'static/img/wykres_analiza.jpg';
+        const imgPath = 'static/img/wykres_analiza.png';
         const newImg = document.createElement('img');
 
         newImg.src = imgPath;
